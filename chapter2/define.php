@@ -1,9 +1,9 @@
 <?php
-define('BOOK','Perfect PHP');
-echo BOOK,PHP_EOL;
+define('BOOK', 'Perfect PHP');
+echo BOOK, PHP_EOL;
 
 const BOOKS = 'Perfect PHP!!';
-echo BOOKS,PHP_EOL;
+echo BOOKS, PHP_EOL;
 
 $value = 'BOOK';
 echo constant($value);

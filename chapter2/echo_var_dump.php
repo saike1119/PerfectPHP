@@ -1,8 +1,8 @@
 <?php
 
-$a =1;
+$a = 1;
 $b = "foo bar";
-$c = array(1,2,3);
+$c = array(1, 2, 3);
 $else = 123;
 
 
