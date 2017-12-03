@@ -1,10 +1,11 @@
 <?php
 
-class magicMethod{
+class magicMethod
+{
     public function __toString()
     {
         // TODO: Implement __toString() method.
-        return 'このクラスの名前は'.__CLASS__.'です';
+        return 'このクラスの名前は' . __CLASS__ . 'です';
     }
 }
 
