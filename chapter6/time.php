@@ -13,7 +13,7 @@
     <p>こんばんは</p>
 <?php endif; ?>
 
-<p>現在<?php echo $hour; ?>時です</p>>
+<p>現在<?php echo $hour; ?>時です</p>
 </body>
 </html>
 <?php
