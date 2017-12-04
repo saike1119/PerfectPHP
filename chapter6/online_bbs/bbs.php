@@ -54,31 +54,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>ひとこと掲示板</title>
-</head>
-<body>
-<h1>ひとこと掲示板</h1>
-
-<form action="bbs.php" method="post">
-    <?php if (count($errors)): ?>
-        <ul class="error_list">
-            <?php foreach ($errors as $error): ?>
-                <li>
-                    <?php echo htmlspecialchars($error, ENT_QUOTES, 'UTF-8') ?>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-    <?php endif; ?>
-    <p>
-        名前：<input type="text" name="name"/><br/>
-        ひとこと：<input type="text" name="comment" size="60"/><br/>
-        <input type="submit" name="submit" value="送信"/>
-    </p>
-</form>
-
 <?php
 //投稿された内容を取得するSQLを作成して結果を取得
 $sql = "SELECT * FROM `post` ORDER BY `created_at` DESC";
@@ -103,5 +78,29 @@ mysqli_free_result($result);
 mysqli_close($link);
 ?>
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ひとこと掲示板</title>
+</head>
+<body>
+<h1>ひとこと掲示板</h1>
+
+<form action="bbs.php" method="post">
+    <?php if (count($errors)): ?>
+        <ul class="error_list">
+            <?php foreach ($errors as $error): ?>
+                <li>
+                    <?php echo htmlspecialchars($error, ENT_QUOTES, 'UTF-8') ?>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+    <p>
+        名前：<input type="text" name="name"/><br/>
+        ひとこと：<input type="text" name="comment" size="60"/><br/>
+        <input type="submit" name="submit" value="送信"/>
+    </p>
+</form>
 </body>
 </html>
