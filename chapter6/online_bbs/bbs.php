@@ -64,7 +64,8 @@ if ($result !== false && mysqli_num_rows($result)) {
     }
 }
 
-
 //取得結果を解放して接続を閉じる
 mysqli_free_result($result);
 mysqli_close($link);
+
+include 'views/bbs_view.php';
